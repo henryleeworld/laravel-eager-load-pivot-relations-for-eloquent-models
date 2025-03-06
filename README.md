@@ -1,4 +1,4 @@
-# Laravel 10 Eloquent 模型預載入 pivot 屬性關聯
+# Laravel 11 Eloquent 模型預載入 pivot 屬性關聯
 
 引入 ajcastro 的 eager-load-pivot-relations 套件來擴增預載入使用 `pivot` 屬性存取中介資料表的資料，要操作多對多關聯需要一個中介的資料表，當透過 `pivot` 屬性存取 Eloquent 關聯時，該關聯資料會被延遲載入。意指該關聯資料直到第一次以屬性存取前，實際上並沒有被載入。
 
@@ -26,5 +26,5 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/sYNJfUt.png)
+![](https://i.imgur.com/Zt8XJpe.png)
 > 如果 `pivot` 資料表包含了其他的屬性，可以在定義關聯方法時指定那些欄位

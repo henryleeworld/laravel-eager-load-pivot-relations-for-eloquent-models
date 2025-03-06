@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use AjCastro\EagerLoadPivotRelations\EagerLoadPivotTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use AjCastro\EagerLoadPivotRelations\EagerLoadPivotTrait;
 
 class Car extends Model
 {
