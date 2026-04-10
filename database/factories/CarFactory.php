@@ -5,6 +5,9 @@ namespace Database\Factories;
 use App\Models\Car;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Car>
+ */
 class CarFactory extends Factory
 {
     /**
@@ -17,13 +20,13 @@ class CarFactory extends Factory
     /**
      * Define the model's default state.
      *
-     * @return array
+     * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            'make' => $this->faker->word,
-            'model' => $this->faker->word,
+            'make' => fake()->word,
+            'model' => fake()->word,
         ];
     }
 }

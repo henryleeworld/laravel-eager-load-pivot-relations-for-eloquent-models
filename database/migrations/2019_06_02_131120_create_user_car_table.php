@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('user_car', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('car_id');
-            $table->unsignedBigInteger('color_id');
+            $table->foreignId('user_id');
+            $table->foreignId('car_id');
+            $table->foreignId('color_id');
             $table->timestamps();
         });
     }

@@ -10,13 +10,11 @@ use Illuminate\Database\Seeder;
 class UserSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
-     *
-     * @return void
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
-        User::factory()->times(50)->create();
+        User::factory()->count(50)->create();
         foreach (User::get() as $user) {
             $user->cars()->sync(Car::pluck('id')->random(5)->map(function ($id) {
                 return [

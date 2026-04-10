@@ -8,12 +8,10 @@ use Illuminate\Database\Seeder;
 class ColorSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
-     *
-     * @return void
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
-        Color::factory()->times(50)->create();
+        Color::factory()->count(50)->create();
     }
 }
